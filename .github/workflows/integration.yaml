@@ -20,6 +20,6 @@ name: Integration
        -uses:actions/setup_node@v2
        -name: Install dependencies
          run: npm install
-       -name: Build application
+       -name: Build app
          run: npm run test
 
