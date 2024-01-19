@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+//import logo from "./logo.svg";
 import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -94,7 +94,7 @@ function App() {
         </h2>
       ) : null}
       <ul
-        role="list"
+        //role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
