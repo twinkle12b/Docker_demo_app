@@ -1,0 +1,29 @@
+name: Integration
+on:
+ pull_request:
+  branches:
+    - main
+jobs:
+   build_application:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v3
+       - uses: actions/setup-node@v2
+       - script: npm install
+         workingDirectory: frontend
+         displayName: "npm install"
+       - script: npm run test
+         workingDirectory: frontend
+         displayName: "npm run build"
+   unit_tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+      - script: npm install
+        workingDirectory: frontend
+        displayName: "npm install"
+      - script: npm run test
+        workingDirectory: frontend
+        displayName: "npm run test"
+
