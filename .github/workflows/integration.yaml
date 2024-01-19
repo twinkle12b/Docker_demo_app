@@ -9,21 +9,21 @@ jobs:
     steps:
        - uses: actions/checkout@v3
        - uses: actions/setup-node@v2
-       - script: npm install
-         workingDirectory: frontend
-         displayName: "npm install"
-       - script: npm run test
-         workingDirectory: frontend
-         displayName: "npm run build"
+       - name: Install dependencies
+         run: |
+           cd frontend | npm install
+       - name: Build application
+         run: |
+           cd frontend | npm run build
    unit_tests:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v2
-      - script: npm install
-        workingDirectory: frontend
-        displayName: "npm install"
-      - script: npm run test
-        workingDirectory: frontend
-        displayName: "npm run test"
+      - name: Install dependencies
+        run: |
+         cd frontend | npm install
+      - name: Build application
+        run: | 
+         cd frontend | npm run test
 
