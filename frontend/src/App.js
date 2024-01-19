@@ -94,7 +94,7 @@ function App() {
         </h2>
       ) : null}
       <ul
-        role="list"
+        //role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
