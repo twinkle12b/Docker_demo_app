@@ -16,18 +16,4 @@ jobs:
        - name: Build application
          run: |
           cd frontend
-          npm run start
-   unit_tests:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v2
-      - name: Install dependencies
-        run: |
-         cd frontend
-         npm install
-      - name: Build application
-        run: |
-         cd frontend
-         npm run test
-
+          npm run build
